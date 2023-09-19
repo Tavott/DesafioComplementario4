@@ -1,5 +1,9 @@
-import { connect } from "mongoose"
+//import { connect } from "mongoose"
+import { connect, set } from "mongoose";
 import config from "./env.js"
+
+// Establece strictQuery en false antes de conectar
+set('strictQuery', false);
 
 const URL = config.mongoUrl
 const dbConnection = async () => {
